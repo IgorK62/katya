@@ -12,11 +12,13 @@
     min-height: 100vh;
     background: #0d0a0e;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     font-family: 'Cormorant Garamond', serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     position: relative;
+    padding: 40px 16px;
   }
 
   /* Floating petals */
@@ -38,14 +40,19 @@
   .card {
     position: relative;
     max-width: 560px;
-    width: 90vw;
+    width: 100%;
     background: linear-gradient(145deg, #1a0f1e 0%, #0f0c14 60%, #1a0f1e 100%);
     border: 1px solid rgba(220, 160, 180, 0.2);
     border-radius: 2px;
-    padding: 60px 50px 50px;
+    padding: 50px 36px 44px;
     box-shadow: 0 0 80px rgba(180, 80, 120, 0.12), 0 0 0 1px rgba(220,160,180,0.05);
     animation: fadeIn 1.6s ease forwards;
     opacity: 0;
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 36px 24px 32px; }
+    .text { font-size: 1.05rem; }
   }
 
   @keyframes fadeIn {
