@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для Кати</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Tenor+Sans&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    min-height: 100vh;
+    background: #0d0a0e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Floating petals */
+  .petal {
+    position: fixed;
+    width: 6px;
+    height: 10px;
+    border-radius: 50% 0 50% 0;
+    opacity: 0;
+    animation: fall linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes fall {
+    0%   { transform: translateY(-20px) rotate(0deg); opacity: 0.6; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+
+  .card {
+    position: relative;
+    max-width: 560px;
+    width: 90vw;
+    background: linear-gradient(145deg, #1a0f1e 0%, #0f0c14 60%, #1a0f1e 100%);
+    border: 1px solid rgba(220, 160, 180, 0.2);
+    border-radius: 2px;
+    padding: 60px 50px 50px;
+    box-shadow: 0 0 80px rgba(180, 80, 120, 0.12), 0 0 0 1px rgba(220,160,180,0.05);
+    animation: fadeIn 1.6s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  .ornament {
+    text-align: center;
+    color: #c8708a;
+    font-size: 18px;
+    letter-spacing: 12px;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideDown 1s ease 0.6s forwards;
+  }
+
+  @keyframes slideDown {
+    from { transform: translateY(-12px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 0.7; }
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 7vw, 3.4rem);
+    color: #f0d8e2;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: 1.1;
+    margin-bottom: 36px;
+    opacity: 0;
+    animation: slideDown 1s ease 0.9s forwards;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: #e8a0b8;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 auto 36px;
+    opacity: 0;
+    animation: slideDown 1s ease 1.1s forwards;
+  }
+
+  .divider-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(200,112,138,0.4), transparent);
+  }
+
+  .divider-heart {
+    color: #c8708a;
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 1.15rem;
+    line-height: 1.95;
+    color: #c8b4be;
+    font-weight: 300;
+    opacity: 0;
+    animation: slideDown 1s ease 1.3s forwards;
+  }
+
+  .text p { margin-bottom: 1.2em; }
+  .text p:last-child { margin-bottom: 0; }
+
+  .text strong {
+    color: #e8a0b8;
+    font-weight: 400;
+  }
+
+  .signature {
+    text-align: right;
+    margin-top: 36px;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: rgba(200, 112, 138, 0.6);
+    opacity: 0;
+    animation: slideDown 1s ease 1.6s forwards;
+  }
+
+  /* Glow corners */
+  .card::before, .card::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-color: rgba(200,112,138,0.25);
+    border-style: solid;
+  }
+  .card::before { top: 12px; left: 12px; border-width: 1px 0 0 1px; }
+  .card::after  { bottom: 12px; right: 12px; border-width: 0 1px 1px 0; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="ornament">✦ ✦ ✦</div>
+  <h1>Катя,<br><em>моя Катюнчик…</em></h1>
+  <div class="divider">
+    <div class="divider-line"></div>
+    <div class="divider-heart">❦</div>
+    <div class="divider-line"></div>
+  </div>
+  <div class="text">
+    <p>Есть слова, которые долго живут внутри, прежде чем решаются выйти наружу. Это — одни из них.</p>
+    <p>Я думаю о тебе в самые обычные моменты: когда утром светлеет окно, когда смеюсь над чем-то глупым, когда хочется поделиться тишиной. Ты как-то незаметно стала частью всего этого.</p>
+    <p><strong>Катюнчик</strong>, ты умеешь делать мир теплее — одним взглядом, одной фразой, самим фактом своего присутствия. Рядом с тобой я чувствую, что всё на своём месте.</p>
+    <p>Я не ищу красивых слов, чтобы произвести впечатление. Я просто хочу, чтобы ты знала: <strong>ты мне очень дорога</strong>. Больше, чем я умею говорить вслух.</p>
+    <p>И если ты позволишь — я хотел бы быть рядом. Не героем, не идеалом — просто собой, но для тебя.</p>
+  </div>
+  <div class="signature">— с любовью ♡</div>
+</div>
+
+<script>
+  // Generate petals
+  const colors = ['#c8708a','#e8a0b8','#f0c8d8','#b05878'];
+  for (let i = 0; i < 18; i++) {
+    const p = document.createElement('div');
+    p.className = 'petal';
+    p.style.cssText = `
+      left: ${Math.random()*100}%;
+      background: ${colors[Math.floor(Math.random()*colors.length)]};
+      width: ${4+Math.random()*6}px;
+      height: ${6+Math.random()*8}px;
+      animation-duration: ${5+Math.random()*8}s;
+      animation-delay: ${Math.random()*8}s;
+      opacity: 0;
+    `;
+    document.body.appendChild(p);
+  }
+</script>
+</body>
+</html>
